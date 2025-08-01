@@ -1,7 +1,7 @@
 package com.crane.template.config;
 
-import com.crane.meeting.interceptors.LoginInterceptor;
-import com.crane.meeting.interceptors.RefreshTokenInterceptor;
+import com.crane.template.interceptors.LoginInterceptor;
+import com.crane.template.interceptors.RefreshTokenInterceptor;
 import jakarta.annotation.Resource;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
