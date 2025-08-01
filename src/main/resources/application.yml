@@ -1,0 +1,32 @@
+server:
+  port: 8081
+spring:
+  data:
+    redis:
+      host: 192.168.92.129
+      port: 6379
+      password: 123456
+  
+  datasource: #数据库
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.92.129:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+  
+  rabbitmq: #rabbitmq
+    host: 192.168.92.129
+    port: 5672
+    username: crane
+    password: 123456
+    listener:
+      simple:
+        retry:
+          enabled: true #是否开启消费者重试
+          max-attempts: 3 #最大重试次数
+          initial-interval: 2000 #重试间隔时间（单位毫秒）
+          multiplier: 2 #间隔时间乘子，间隔时间*乘子=下一次的间隔时间，最大不能超过设置的最大间隔时间
+          max-interval: 10000 #重试最大时间间隔（单位毫秒）
+
+mybatis-plus:
+  global-config:
+    banner: false
