@@ -24,6 +24,7 @@ public class CursorPageReq implements Serializable {
     private static final long serialVersionUID = -4272961948444728170L;
 
     public static final Integer DEFAULT_PAGE_SIZE = 5;
+
     // 如果为null表示没有下一页
     @Schema(description = "下一页游标")
     private Long nextCursor;

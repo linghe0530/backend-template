@@ -31,6 +31,7 @@ public class CursorPage<T> implements Serializable {
     @Schema(description = "是否有下一页")
     private Boolean hasNext;
 
+
     public static <T> CursorPage<T> empty(Long nextCursor, Boolean hasNext) {
         return new CursorPage<>(CollUtils.emptyList(), nextCursor, hasNext);
     }

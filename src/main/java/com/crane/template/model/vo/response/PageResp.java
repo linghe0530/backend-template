@@ -36,6 +36,7 @@ public class PageResp<T> implements Serializable {
     protected List<T> list;
 
 
+
     public static <T> PageResp<T> empty(Long total, Long pageSize, Long pageNo, Long pages) {
         return new PageResp<>(pageNo, pageSize, total, pages, CollUtils.emptyList());
     }
